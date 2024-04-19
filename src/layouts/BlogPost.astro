@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
+
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
@@ -12,7 +13,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={"blog"} description={description} />
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -33,7 +34,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
-				color: rgb(var(--gray-dark));
+				color:aqua;
 			}
 			.title {
 				margin-bottom: 1em;
@@ -51,10 +52,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			pre {
+				background-color: rgb(27, 27, 27);
+			}
+			code {
+				background-color: aliceblue;
+			}
 		</style>
 	</head>
 
 	<body>
+		
 		<Header />
 		<main>
 			<article>

@@ -1,6 +1,13 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { about_TITLE, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
 ---
+<head>
+	<BaseHead title={about_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<h2>About</h2>
 
 <Layout
 	title="About Me"
